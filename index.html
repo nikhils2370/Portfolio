@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Sharma — Full-Stack Web Developer & UI Engineer</title>
+    <meta name="description"
+        content="Portfolio of Nikhil Sharma — Full-Stack Web Developer & UI Engineer building fast, responsive web apps with React, Node.js and MongoDB.">
+    <meta name="theme-color" content="#0e0f14">
+    <meta property="og:title" content="Nikhil Sharma — Full-Stack Web Developer">
+    <meta property="og:description" content="Fast, considered interfaces backed by robust full-stack engineering.">
+    <meta property="og:image" content="image/nikhil-1.webp">
+
+    <!-- Set theme before paint (no flash) -->
+    <script>
+        document.documentElement.classList.add("js");
+        try {
+            var t = localStorage.getItem("theme");
+            if (t) document.documentElement.setAttribute("data-theme", t);
+        } catch (e) { }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#home">Skip to content</a>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="header">
+        <div class="nav">
+            <a href="#home" class="logo" aria-label="Nikhil Sharma — home">Nikhil <span>Sharma</span></a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Primary">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#About" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#skill" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="nav-links__mobile-cta">
+                    <a href="Nikhil_Sharma_Resume.pdf" download class="btn btn--ghost"><i
+                            class="fa-regular fa-file"></i> Resume</a>
+                    <a href="#contact" class="btn btn--primary">Let's talk</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="dropdown" id="dropdown">
+                    <button class="btn btn--ghost dropdown-btn" aria-haspopup="true" aria-expanded="false">
+                        Download <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="Nikhil_Sharma_Resume.pdf" download="Nikhil_Sharma_Resume">
+                            <i class="fa-regular fa-file"></i> Resume (CV)
+                        </a>
+                        <a href="Nikhil_Sharma_Portfolio.pdf" download="Nikhil_Sharma_Portfolio">
+                            <i class="fa-solid fa-briefcase"></i> Portfolio
+                        </a>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn--primary nav-talk">Let's talk</a>
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle light / dark theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="home">
+            <div class="hero__glow" aria-hidden="true"></div>
+            <div class="container hero__grid">
+                <div class="hero__text">
+                    <span class="status-chip reveal"><i class="dot"></i> Open to work &amp; collaborations</span>
+                    <p class="eyebrow reveal">Full-Stack Web Developer — UI Engineer</p>
+                    <h1 class="reveal">Hi, I'm <br><span class="grad">Nikhil Sharma</span></h1>
+                    <p class="typed-line reveal">I build <span id="typed" aria-live="off"></span><span
+                            class="caret"></span></p>
+                    <p class="hero__desc reveal">I build fast, considered interfaces — the kind that feel obvious in
+                        hindsight. Currently crafting seamless product experiences at the intersection of design and
+                        full-stack engineering.</p>
+                    <div class="hero__cta reveal">
+                        <a href="#work" class="btn btn--primary btn--lg">View Work <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn--ghost btn--lg">Get in touch</a>
+                    </div>
+                    <div class="socials reveal">
+                        <a href="https://github.com/nikhils2370" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:nikhilsharma@example.com" aria-label="Email"><i
+                                class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero__visual reveal">
+                    <div class="card" id="myCard" tabindex="0" role="button" aria-pressed="false"
+                        aria-label="Profile card. Press to flip and show GitHub QR code">
+                        <div class="card-face card-front">
+                            <img src="image/nikhil-1.webp" alt="Portrait of Nikhil Sharma" width="768" height="1364"
+                                fetchpriority="high">
+                            <span class="hint"><i class="fa-solid fa-rotate"></i> Tap to see GitHub QR</span>
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="qr-box"><img src="image/qrcode_github.com.webp" alt="QR code for GitHub profile"
+                                    width="450" height="450"></div>
+                            <p class="scan-text">Scan to visit my GitHub</p>
+                            <span class="hint"><i class="fa-solid fa-rotate"></i> Tap to go back</span>
+                        </div>
+                    </div>
+                    <div class="float-badge float-badge--1"><i class="fa-brands fa-react"></i> React</div>
+                    <div class="float-badge float-badge--2"><i class="fa-brands fa-node-js"></i> Node.js</div>
+                    <div class="float-badge float-badge--3"><i class="fa-solid fa-leaf"></i> MongoDB</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="stats reveal">
+                    <div class="stat"><strong data-count="3">0</strong><span>Live Projects</span></div>
+                    <div class="stat"><strong data-count="10" data-suffix="+">0</strong><span>Technologies</span></div>
+                    <div class="stat"><strong data-count="100" data-suffix="%">0</strong><span>Responsive</span></div>
+                    <div class="stat"><strong data-count="21">0</strong><span>Years Young</span></div>
+                </div>
+            </div>
+
+            <a href="#About" class="scroll-hint" aria-label="Scroll to About"><i
+                    class="fa-solid fa-chevron-down"></i></a>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section class="section" id="About">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="section-kicker">01 — About</span>
+                    <h2 class="section-title">About Me<span class="dot-accent">.</span></h2>
+                </header>
+
+                <div class="about-grid">
+                    <aside class="about-box reveal">
+                        <div class="about-box__avatar">
+                            <img src="image/nikhil.webp" alt="" loading="lazy" width="768" height="1364">
+                        </div>
+                        <div class="fact"><span class="fact__label">Name</span><span class="fact__value">Nikhil
+                                Sharma</span></div>
+                        <div class="fact"><span class="fact__label">Age</span><span class="fact__value">21</span></div>
+                        <div class="fact"><span class="fact__label">Qualification</span><span class="fact__value"> Full Stack Development</span></div>
+                        <div class="fact"><span class="fact__label">Based in</span><span class="fact__value">India
+                            </span></div>
+                    </aside>
+
+                    <div class="accordion reveal">
+                        <div class="accordion-item active">
+                            <h3><button class="accordion-header" aria-expanded="true">
+                                    <span>01. Who I Am &amp; Background</span><i class="fa-solid fa-plus"></i>
+                                </button></h3>
+                            <div class="accordion-content">
+                                <div class="accordion-inner">
+                                    <p>Hi, I'm <strong>Nikhil Sharma</strong>! I am a passionate Full-Stack Web
+                                        Developer with a degree in Bachelor of Arts (BA) from JNVU. My journey in
+                                        technology is driven by a deep curiosity to solve real-world problems and build
+                                        powerful, scalable web applications.</p>
+                                    <p>I bridge the gap between clean user interfaces and robust server-side
+                                        architecture, turning complex ideas into high-performing functional code.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3><button class="accordion-header" aria-expanded="false">
+                                    <span>02. Tech Stack &amp; Core Skills</span><i class="fa-solid fa-plus"></i>
+                                </button></h3>
+                            <div class="accordion-content">
+                                <div class="accordion-inner">
+                                    <div class="skills-grid">
+                                        <div class="skill-category"><span class="category-title">Front-End</span>
+                                            <p>HTML5, CSS3, JavaScript, React.js</p>
+                                        </div>
+                                        <div class="skill-category"><span class="category-title">Back-End</span>
+                                            <p>Node.js, Express.js, PHP, Python</p>
+                                        </div>
+                                        <div class="skill-category"><span class="category-title">Database</span>
+                                            <p>MongoDB</p>
+                                        </div>
+                                        <div class="skill-category"><span class="category-title">Specialization</span>
+                                            <p>Full-Stack Web Development</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3><button class="accordion-header" aria-expanded="false">
+                                    <span>03. My Approach &amp; Vision</span><i class="fa-solid fa-plus"></i>
+                                </button></h3>
+                            <div class="accordion-content">
+                                <div class="accordion-inner">
+                                    <p>I focus on delivering clean, efficient, and user-friendly digital experiences. I
+                                        am always eager to master modern frameworks, optimize performance, and
+                                        collaborate on exciting full-stack projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SERVICES ============ -->
+        <section class="section section--alt" id="services">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="section-kicker">02 — Services</span>
+                    <h2 class="section-title">What I Do<span class="dot-accent">.</span></h2>
+                    <p class="section-subtitle">From pixels to databases — the whole stack, handled with care.</p>
+                </header>
+                <div class="services-grid">
+                    <article class="service reveal">
+                        <span class="service__icon"><i class="fa-solid fa-laptop-code"></i></span>
+                        <h3>Frontend Development</h3>
+                        <p>Pixel-perfect, responsive interfaces with HTML5, CSS3, JavaScript and React.</p>
+                    </article>
+                    <article class="service reveal">
+                        <span class="service__icon"><i class="fa-solid fa-server"></i></span>
+                        <h3>Backend &amp; APIs</h3>
+                        <p>Secure, scalable REST APIs and server logic with Node.js, Express, Python.</p>
+                    </article>
+                    <article class="service reveal">
+                        <span class="service__icon"><i class="fa-solid fa-database"></i></span>
+                        <h3>Database Design</h3>
+                        <p>Clean data models and fast queries with MongoDB for real-world applications.</p>
+                    </article>
+                    <article class="service reveal">
+                        <span class="service__icon"><i class="fa-solid fa-pen-ruler"></i></span>
+                        <h3>UI / UX Design</h3>
+                        <p>Layouts, flows and micro-interactions that make products feel obvious to use.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ WORK ============ -->
+        <section class="section" id="work">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="section-kicker">03 — Work</span>
+                    <h2 class="section-title">Selected Work<span class="dot-accent">.</span></h2>
+                    <p class="section-subtitle">A collection of projects showcasing my full-stack capabilities. Click a
+                        card to see more.</p>
+                </header>
+
+                <div class="filters reveal" role="group" aria-label="Filter projects">
+                    <button class="chip active" data-filter="all">All</button>
+                    <button class="chip" data-filter="fullstack">Full-Stack</button>
+                    <button class="chip" data-filter="frontend">Frontend / UI</button>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal" data-cat="fullstack" tabindex="0" role="button"
+                        aria-label="Open Blinkit Clone details">
+                        <div class="project-slider">
+                            <div class="slider-track">
+                                <img src="image/B-1.webp" alt="Blinkit Clone screenshot 1" loading="lazy" width="1200"
+                                    height="562">
+                                <img src="image/B-2.webp" alt="Blinkit Clone screenshot 2" loading="lazy" width="1200"
+                                    height="562">
+                                <img src="image/B-3.webp" alt="Blinkit Clone screenshot 3" loading="lazy" width="1200"
+                                    height="562">
+                            </div>
+                            <div class="slider-dots"></div>
+                            <span class="view-more"><i class="fa-solid fa-expand"></i> Details</span>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Full-Stack Application</span>
+                            <h3 class="project-title">Blinkit Clone</h3>
+                            <p class="project-description">A full-featured online store built with Html5, APIs.</p>
+                            <div class="project-tech"><span>APIs</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://blinkit-clone-ruddy-chi.vercel.app/" class="project-link"
+                                    target="_blank" rel="noopener">Live Demo <i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://github.com/nikhils2370/Blinkit-Clone.git"
+                                    class="project-link project-link--secondary" target="_blank" rel="noopener"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-cat="fullstack" tabindex="0" role="button"
+                        aria-label="Open Mini Applications Suite details">
+                        <div class="project-slider">
+                            <div class="slider-track">
+                                <img src="image/s1.webp" alt="Mini Apps screenshot 1" loading="lazy" width="1200"
+                                    height="562">
+                                <img src="image/s2.webp" alt="Mini Apps screenshot 2" loading="lazy" width="1200"
+                                    height="549">
+                                <img src="image/s3.webp" alt="Mini Apps screenshot 3" loading="lazy" width="1200"
+                                    height="554">
+                            </div>
+                            <div class="slider-dots"></div>
+                            <span class="view-more"><i class="fa-solid fa-expand"></i> Details</span>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Backend API &amp; Apps</span>
+                            <h3 class="project-title">Mini Applications Suite</h3>
+                            <p class="project-description">A collection of utility tools and productivity mini-apps
+                                built to demonstrate real-time features and responsive design.</p>
+                            <div class="project-tech"><span>JavaScript</span><span>CSS3</span>
+                                <span>APIs</span><span>HTML5</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://minapp-taupe.vercel.app/" class="project-link" target="_blank"
+                                    rel="noopener">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://github.com/nikhils2370/Mini-APPs.git"
+                                    class="project-link project-link--secondary" target="_blank" rel="noopener"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-cat="frontend" tabindex="0" role="button"
+                        aria-label="Open Myntra Clone details">
+                        <div class="project-slider">
+                            <div class="slider-track">
+                                <img src="image/m1.webp" alt="Myntra Clone screenshot 1" loading="lazy" width="1200"
+                                    height="560">
+                                <img src="image/m2.webp" alt="Myntra Clone screenshot 2" loading="lazy" width="1200"
+                                    height="560">
+                                <img src="image/m3.webp" alt="Myntra Clone screenshot 3" loading="lazy" width="1200"
+                                    height="559">
+                            </div>
+                            <div class="slider-dots"></div>
+                            <span class="view-more"><i class="fa-solid fa-expand"></i> Details</span>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">UI / UX &amp; E-Commerce</span>
+                            <h3 class="project-title">Myntra Clone</h3>
+                            <p class="project-description">A modern e-commerce user interface with responsive layouts,
+                                dynamic filtering, and custom animations.</p>
+                            <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                            <div class="project-links">
+                                <a href="https://myntra-clone-orpin-ten.vercel.app/" class="project-link"
+                                    target="_blank" rel="noopener">Live Demo <i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://github.com/nikhils2370/Myntra-Clone.git"
+                                    class="project-link project-link--secondary" target="_blank" rel="noopener"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <p class="empty-note" id="emptyNote" hidden>No projects in this category yet.</p>
+            </div>
+        </section>
+
+        <!-- ============ SKILLS ============ -->
+        <section class="section section--alt" id="skill">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="section-kicker">04 — Skills</span>
+                    <h2 class="section-title">My Technical Skills<span class="dot-accent">.</span></h2>
+                    <p class="section-subtitle">Proficiency in web development technologies</p>
+                </header>
+
+                <div class="skills-layout">
+                    <div class="skills-bars reveal">
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">HTML / CSS</span><span
+                                    class="skill-percentage">90%</span></div>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                aria-valuemax="100" aria-label="HTML / CSS">
+                                <div class="progress-fill" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">JavaScript</span><span
+                                    class="skill-percentage">80%</span></div>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100" aria-label="JavaScript">
+                                <div class="progress-fill" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">React.js</span><span
+                                    class="skill-percentage">75%</span></div>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                aria-valuemax="100" aria-label="React.js">
+                                <div class="progress-fill" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">UI / UX Design</span><span
+                                    class="skill-percentage">85%</span></div>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                aria-valuemax="100" aria-label="UI UX Design">
+                                <div class="progress-fill" data-level="85"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-grid reveal" aria-label="Technology stack">
+                        <div class="tech"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+                        <div class="tech"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+                        <div class="tech"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                        <div class="tech"><i class="fa-brands fa-react"></i><span>React</span></div>
+                        <div class="tech"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+                        <div class="tech"><i class="fa-solid fa-bolt"></i><span>Express</span></div>
+                        <!-- <div class="tech"><i class="fa-brands fa-php"></i><span>PHP</span></div> -->
+                        <div class="tech"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                        <div class="tech"><i class="fa-solid fa-leaf"></i><span>MongoDB</span></div>
+                        <div class="tech"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+                        <div class="tech"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+                        <!-- <div class="tech"><i class="fa-brands fa-figma"></i><span>Figma</span></div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="section">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="section-kicker">05 — Contact</span>
+                    <h2 class="section-title">Get In Touch<span class="dot-accent">.</span></h2>
+                </header>
+
+                <div class="contact-grid">
+                    <div class="contact-info-box reveal">
+                        <h3>Contact Information</h3>
+                        <p class="contact-subtitle">Feel free to reach out for collaborations or just a friendly hello!
+                        </p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa-regular fa-user"></i></span>
+                                <div><span class="info-label">Name</span><span class="info-value">Nikhil Sharma</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <div><span class="info-label">Location</span><span class="info-value">Jaisalmer,
+                                        Rajasthan, India</span></div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"><i class="fa-regular fa-envelope"></i></span>
+                                <div>
+                                    <span class="info-label">Email</span>
+                                    <a href="mailto:nikhilsharma@example.com" class="info-value email-link"
+                                        id="emailText">nikhils2370@gmail.com</a>
+                                </div>
+                                <button class="copy-btn" id="copyEmail" aria-label="Copy email address"><i
+                                        class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-box reveal">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="userName">Your Name</label>
+                                    <input type="text" id="userName" name="name" placeholder="Enter your full name"
+                                        autocomplete="name" required>
+                                    <small class="err"></small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="userEmail">Your Email</label>
+                                    <input type="email" id="userEmail" name="email"
+                                        placeholder="Enter your email address" autocomplete="email" required>
+                                    <small class="err"></small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="userSubject">Subject</label>
+                                <input type="text" id="userSubject" name="subject"
+                                    placeholder="What is this regarding?" required>
+                                <small class="err"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="userMessage">Message <em class="counter" id="msgCounter">0 / 500</em></label>
+                                <textarea id="userMessage" name="message" rows="5" maxlength="500"
+                                    placeholder="Write your message here..." required></textarea>
+                                <small class="err"></small>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--lg send-btn" id="sendBtn">
+                                <span>Send Message</span> <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ PROJECT MODAL ============ -->
+    <div id="projectModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close project details"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <div class="modal-slider">
+                    <button class="modal-nav modal-prev" aria-label="Previous image"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+                    <div class="modal-slide-window">
+                        <div class="modal-slide-track" id="modalSlideTrack"></div>
+                    </div>
+                    <button class="modal-nav modal-next" aria-label="Next image"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                    <div class="modal-counter" id="modalCounter"></div>
+                </div>
+                <div class="modal-details">
+                    <span class="project-tag" id="modalTag"></span>
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalDescription"></p>
+                    <div id="modalTech" class="project-tech"></div>
+                    <div id="modalLinks" class="project-links"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ FLOATING WIDGETS ============ -->
+    <div class="time-widget">
+        <button class="time-btn" id="timeToggleBtn" aria-expanded="false" aria-controls="timePanel">
+            <i class="fa-regular fa-clock"></i>
+            <span id="triggerTimeText">--:--</span>
+        </button>
+        <div class="time-panel" id="timePanel">
+            <h3>Current Date &amp; Time</h3>
+            <div class="time-display" id="fullTime">00:00:00</div>
+            <div class="date-display" id="fullDate"></div>
+            <div class="day-display" id="fullDay"></div>
+        </div>
+    </div>
+
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">Nikhil <span>Sharma</span></a>
+                    <p class="footer-tagline">Full-Stack Web Developer &amp; UI Engineer crafting clean, functional, and
+                        scalable web experiences.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#skill">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/nikhils2370" target="_blank" rel="noopener"><i
+                                class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener"><i
+                                class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                        <a href="mailto:nikhilsharma@example.com"><i class="fa-regular fa-envelope"></i> Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> Nikhil Sharma. All rights reserved.</p>
+                <p>Built with HTML5, CSS3 &amp; JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
